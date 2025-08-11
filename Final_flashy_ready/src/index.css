@@ -1,0 +1,89 @@
+
+/* Added flashy styles and animations */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* gradient animated text */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(90deg, #ff7eb3, #7afcff, #9d7aff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 6s ease infinite;
+  font-weight: 800;
+}
+
+/* neon glow */
+.neon-glow {
+  box-shadow: 0 0 12px rgba(157,122,255,0.45), 0 0 24px rgba(122,252,255,0.12);
+}
+
+.btn-neon {
+  transition: all .2s ease;
+  border-radius: 9999px;
+  padding: .4rem .9rem;
+  box-shadow: 0 6px 24px rgba(45, 0, 255, 0.15), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.card-flip {
+  perspective: 1000px;
+}
+.card-flip-inner {
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(180deg) scale(1.03);
+}
+.card-front, .card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  border-radius: .75rem;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* typing effect */
+.typing {
+  border-right: 2px solid rgba(255,255,255,0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(30,end), blink .7s infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* subtle page background */
+body {
+  background: radial-gradient(ellipse at top left, rgba(10,10,25,0.7), rgba(6,3,23,1));
+  color: #e6eef8;
+}
+
+/* utility for glass neon cards */
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+}
+
+/* --- original file below --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

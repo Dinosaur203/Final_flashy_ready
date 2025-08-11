@@ -1,0 +1,3 @@
+Place a chill lo-fi mp3 file here named 'lofi-sample.mp3'.
+You can download a free lo-fi loop and save it at: public/lofi-sample.mp3
+This environment cannot fetch audio automatically.
